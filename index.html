@@ -1,26 +1,46 @@
-<!-- index.html -->
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Image Generator</title>
-  </head>
-  <body>
-    <h1>Image Generator</h1>
-    
-    <!-- Form to select the image type -->
+<head>
+  <meta charset="utf-8">
+  <title>AI Image Generator</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    img {
+      width: 300px;
+      height: 300px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
     <form id="image-form">
-      <label for="image-type">Image Type:</label>
-      <select name="image-type" id="image-type">
-        <option value="1">Type 1</option>
-        <option value="2">Type 2</option>
-      </select>
-      <button type="submit">Generate</button>
-    </form>
-    
-    <!-- Display the image here -->
-    <div id="image"></div>
-    
-    <!-- Load jQuery and the custom script -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts.js"></script>
-  </body>
+      <label for="prompt">Enter image prompt:</label><br>
+      <input type="text" id="prompt" v-model="prompt"><br>
+      <button type="submit" @click.prevent="generateImage">Generate Image</button>
+    </form> 
+    <img v-if="imageUrl" :src="imageUrl" alt="Generated Image">
+  </div>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        prompt: "",
+        imageUrl: "",
+      },
+      methods: {
+        async generateImage() {
+          // If no prompt is entered, use a default prompt
+          if (!this.prompt) {
+            this.prompt = "sunset over the ocean";
+          }
+          // Send the prompt to the API to generate an image
+          const response = await axios.get(`https://api.example.com/generate-image?prompt=${this.prompt}`);
+          this.imageUrl = response.data.imageUrl;
+        },
+      },
+    });
+  </script>
+</body>
 </html>
