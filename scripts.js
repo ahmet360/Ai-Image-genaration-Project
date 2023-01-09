@@ -9,5 +9,5 @@ $(document).ready(function() {
     var imageType = $('#image-type').val();
     
     // Send an HTTP POST request to the Python server
-    $.post('http://localhost:5000/', {type: imageType}, function(response) {
+    $.post('https://ahmet360.github.io/Ai-Image-genaration-Project/', {type: imageType}, function(response) {
       //
