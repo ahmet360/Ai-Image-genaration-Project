@@ -1,47 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>AI Image Generator</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <style>
-    img {
-      width: 300px;
-      height: 300px;
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
+  <link rel="stylesheet" href="path/to/styles.css">
+  <script src="path/to/script.js"></script>
 </head>
 <body>
-  <div id="app">
-    <form id="image-form">
-      <label for="prompt">Enter image prompt:</label><br>
-      <input type="text" id="prompt" v-model="prompt"><br>
-      <button type="submit" @click.prevent="generateImage">Generate Image</button>
-    </form> 
-    <img v-if="imageUrl" :src="imageUrl" alt="Generated Image">
-  </div>
-  <script>
-    const app = new Vue({
-      el: "#app",
-      data: {
-        prompt: "",
-        imageUrl: "",
-      },
-      methods: {
-        async generateImage() {
-          // If no prompt is entered, use a default prompt
-          if (!this.prompt) {
-            this.prompt = "sunset over the ocean";
-          }
-          // Send the prompt to the API to generate an image
-          const response = await axios.get(`https://api.example.com/generate-image?prompt=${this.prompt}`);
-          this.imageUrl = response.data.imageUrl;
-        },
-      },
-    });
-  </script>
+  <img src="{{ image_path }}" alt="Generated image" width="500">
+<p>{{ image_path }}</p>
+  <form action="path/to/server-side-script.py" method="post">
+    from flask import Flask, render_template, request
+import tensorflow as tf
+app = Flask(__name__)
+model = tf.keras.models.load_model('path/to/trained_model.h5')
+
+@app.route('/generate', methods=['POST'])
+def generate():
+    noise = tf.random.normal([1, 100])
+    generated_images = model(noise, training=False)
+    # Saving the generated image with a random filename
+    image_name = 'generated_image_{}.png'.format(random.randint(0,10000))
+    tf.keras.preprocessing.image.save_img(image_name, generated_images[0])
+    return render_template('show_image.html', image_path=image_name)  
+    <input type="submit" value="Submit">
+  </form>
 </body>
 </html>
+
