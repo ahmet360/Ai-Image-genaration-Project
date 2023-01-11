@@ -1,1 +1,62 @@
+html {
+  height: 100%;
+}
+body {
+	margin: 0;
+  background: radial-gradient(#888, #444);
+} 
+#loader{
+  position: absolute;
+  left:50%;
+  top:50%;
+  width:300px;
+  height:180px;
+  margin-left:-150px;
+  margin-top:-90px;
+}
+.bar{
+  position: absolute;
+  -webkit-animation:jump 1s ease infinite;
+  animation:jump 1s ease infinite;
+  border-radius: 2px;
+  background:linear-gradient(to bottom, transparent, rgba(0,0,0,0.1));
+}
+.bar:nth-child(1){
+  left:0;
+}
+.bar:nth-child(2){
+  left:40px;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.bar:nth-child(3){
+  left:80px;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.bar:nth-child(4){
+  left:120px;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.bar:nth-child(5){
+  left:160px;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.bar:nth-child(6){
+  left:200px;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.bar:nth-child(7){
+  left:240px;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.bar:nth-child(8){
+  left:280px;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
 
