@@ -32,10 +32,6 @@ li a:hover:not(.active) {
 .active {
   background-color: #04AA6D;
 }
-body {
-	margin: 0;
-  background: radial-gradient(#888, #444);
-} 
 #loader{
   position: absolute;
   left:50%;
