@@ -17,7 +17,42 @@
        <div class="bar"></div>
        <div class="bar"></div>
      </div>
-  
+     <body>
+        <div class="container">
+          <div class="card">
+            <h1>AI Fact of the Day</h1>
+            <p id="fact"></p>
+          </div>
+        </div>
+        <script>
+          // Add some JavaScript to display a different fact each time the page is refreshed
+          var facts = [
+            "AI can be used to improve healthcare by assisting doctors in diagnosing and treating patients.",
+            "AI is used in the financial industry to analyze market trends and make predictions about stock prices.",
+            "AI is being used to develop new materials and improve manufacturing processes.",
+            "AI is being used to help design more energy-efficient buildings.",
+            "AI can be used to analyze large amounts of data and make discoveries in scientific research.",
+            "AI is being used to improve transportation by developing self-driving cars."
+          ];
+          
+       // Keep track of the previous fact
+       var previousFact = "";
+            
+            function getRandomFact() {
+              var randomFact = "";
+              
+              // Keep generating a new random fact until it is different from the previous one
+              while (randomFact === previousFact) {
+                randomFact = facts[Math.floor(Math.random() * facts.length)];
+              }
+              
+              previousFact = randomFact;
+              document.getElementById("fact").innerHTML = randomFact;
+            }
+            
+            // Call the function to get and display the first random fact
+            getRandomFact();
+        </script>
           <footer>
               <ul class="horizontal">
   <li><a class="active" href="index.html">Home</a></li>
@@ -28,27 +63,3 @@
 </footer>
     </body>
 </html>
-
-</head>
-<body>
-  <div class="container">
-    <div class="card">
-      <h1>AI Fact of the Day</h1>
-      <p id="fact"></p>
-    </div>
-  </div>
-  <script>
-    // Add some JavaScript to display a different fact each time the page is refreshed
-    var facts = [
-      "AI can be used to improve healthcare by assisting doctors in diagnosing and treating patients.",
-      "AI is used in the financial industry to analyze market trends and make predictions about stock prices.",
-      "AI is being used to develop new materials and improve manufacturing processes.",
-      "AI is being used to help design more energy-efficient buildings.",
-      "AI can be used to analyze large amounts of data and make discoveries in scientific research.",
-      "AI is being used to improve transportation by developing self-driving cars."
-    ];
-    
-    // Get a random fact from the array and display it on the page
-    var randomFact = facts[Math.floor(Math.random() * facts.length)];
-    document.getElementById("fact").innerHTML = randomFact;
-  </script>
