@@ -7,7 +7,6 @@ body{
   margin: 0;
   padding: 0;
 }
-}
 ul {
   list-style-type: none;
   margin: 0;
@@ -125,7 +124,6 @@ li a:hover:not(.active) {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f1f1f1;
 }
 .card {
   width: 500px;
