@@ -1,5 +1,16 @@
 footer{
-
+size: 4px;
+color: darkgray;
+}
+.no{
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.no > a {
+  color: currentColor;
+  display: inline-block;
+  pointer-events: none;
+  text-decoration: none;
 }
 html {
   height: 100%;
