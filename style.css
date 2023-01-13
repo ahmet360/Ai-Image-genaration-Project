@@ -20,6 +20,7 @@
 #arrow {
   width: 50px; /* set width of the arrow */
   animation: moveArrow 2s infinite; /* animation name and duration*/
+  color: white;
 }
 
 /* Animation */
