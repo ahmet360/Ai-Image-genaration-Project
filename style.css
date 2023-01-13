@@ -15,10 +15,11 @@
   left: 50%; /*center of the page horizontally*/
   margin-left: 10rem; /*align to center horizontally*/
   text-align: center; /* center the image inside the container*/
+  transform: translateX(30rem);
 }
 
 #arrow {
-  width: 15px; /* set width of the arrow */
+  width: 25px; /* set width of the arrow */
   animation: moveArrow 2s infinite; /* animation name and duration*/
 }
 
