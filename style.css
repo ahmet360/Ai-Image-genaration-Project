@@ -13,7 +13,7 @@
   position: fixed;
   bottom: 20px; /*distance from the bottom of the page*/
   left: 50%; /*center of the page horizontally*/
-  transform: translateX(-50%); /*align to center horizontally*/
+  transform: translateX(50%); /*align to center horizontally*/
   text-align: center; /* center the image inside the container*/
 }
 
