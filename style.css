@@ -11,14 +11,14 @@
 }
 .arrow-container {
   position: fixed;
-  bottom: 20px; /*distance from the bottom of the page*/
+  bottom: 35px; /*distance from the bottom of the page*/
   left: 50%; /*center of the page horizontally*/
   transform: translateX(50%); /*align to center horizontally*/
   text-align: center; /* center the image inside the container*/
 }
 
 #arrow {
-  width: 50px; /* set width of the arrow */
+  width: 30px; /* set width of the arrow */
   animation: moveArrow 2s infinite; /* animation name and duration*/
   color: white;
 }
