@@ -209,7 +209,7 @@ footer{
 }
 .t{
   color: whitesmoke;
-  text-align: center;
+  transform: translateX(10rem);
 }
 .end{
   size: 4px;
