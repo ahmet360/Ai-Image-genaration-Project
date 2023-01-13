@@ -22,6 +22,7 @@
   width: 25px; /* set width of the arrow */
   animation: moveArrow 2s infinite; /* animation name and duration*/
   transform: translateX(30rem);
+  transform: translateY(15rem);
 }
 
 /* Animation */
