@@ -205,7 +205,9 @@ footer{
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color:whitesmoke;
+}
+.t{
+  color: whitesmoke;
 }
 .end{
   size: 4px;
