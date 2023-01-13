@@ -12,6 +12,20 @@ color: darkgray;
   pointer-events: none;
   text-decoration: none;
 }
+#arrow {
+  position: fixed;
+  bottom: 20px; /*distance from bottom of the page*/
+  left: 50%; /*center of the page*/
+  transform: translateX(-50%); /*align to center horizontal*/
+  animation: moveArrow 2s infinite; /* animation name and duration*/
+}
+
+/* Animation */
+@keyframes moveArrow {
+  0% { transform: translateY(0); } /*start position*/
+  50% { transform: translateY(10px); } /*move up*/
+  100% { transform: translateY(0); } /*move back to original position*/
+}
 html {
   height: 100%;
 }

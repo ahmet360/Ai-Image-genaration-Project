@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>AI-Image-genaration-Project
-</title>
-         <link rel="stylesheet" href="style.css">
+        <title>AI-Image-genaration-Project</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <ul class="horizontal">
@@ -23,16 +22,38 @@
        <div class="bar"></div>
        <div class="bar"></div>
      </div>
-     <body>
         <div class="container">
           <div class="card">
             <h1>AI Fact of the Day</h1>
             <p id="fact"></p>
           </div>
         </div>
+        <div class="intro" id="intro" style="display: none;">
+          <h2>What is AI?</h2>
+          <p>AI stands for Artificial Intelligence, and it refers to the simulation of human intelligence in machines that are programmed to think and learn like humans.</p>
+        </div>
+        <img src="arrow.png" id="arrow" alt="Scroll Down Arrow">
         <script>
-          // Add some JavaScript to display a different fact each time the page is refreshed
           var facts = [
+            "AI can be used in natural language processing tasks such as speech recognition and language translation.",
+            "AI can be used for predictive maintenance in industries like manufacturing and transportation, to prevent equipment breakdowns and improve efficiency.",
+            "AI can be used to improve customer service by providing chatbots and virtual assistants that can understand and respond to customer inquiries.",
+            "AI is being used in the field of robotics to develop machines that can perform tasks autonomously.",
+            "AI can be used in computer vision to analyze images and videos and detect objects, faces and more.",
+            "AI is being used in the field of self-driving cars to detect and respond to obstacles on the road.",
+            "AI is being used in the field of drug discovery to analyze large amounts of data and identify potential new drugs.",
+            "AI is being used in the field of agriculture to optimize crop yields and improve efficiency.",
+            "AI can be used in natural language generation to create written and spoken content that is indistinguishable from human-generated content.",
+            "AI is being used in the field of finance to detect and prevent fraud.",
+            "AI can be used in the field of natural resources to optimize exploration and extraction of resources.",
+            "AI is being used in the field of education to personalize learning experiences for students.",
+            "AI is being used in the field of energy to optimize power generation and distribution.",
+            "AI can be used in the field of healthcare for early disease detection and personalized medicine.",
+            "AI is being used in the field of logistics to optimize supply chain management and transportation.",
+            "AI is being used in the field of manufacturing to optimize production processes and reduce waste.",
+            "AI is being used in the field of retail to optimize inventory management and improve customer experiences.",
+            "AI can be used to analyze social media data to understand public opinion and sentiment.",
+            "AI can be used in the field of cybersecurity to detect and respond to threats.",
             "AI can be used to improve healthcare by assisting doctors in diagnosing and treating patients.",
             "AI is used in the financial industry to analyze market trends and make predictions about stock prices.",
             "AI is being used to develop new materials and improve manufacturing processes.",
@@ -44,7 +65,7 @@
        // Keep track of the previous fact
        var previousFact = "";
             
-            function getRandomFact() {
+       function getRandomFact() {
               var randomFact = "";
               
               // Keep generating a new random fact until it is different from the previous one
@@ -58,9 +79,17 @@
             
             // Call the function to get and display the first random fact
             getRandomFact();
+
+            // Show the introduction about AI when the user scrolls down
+            window.onscroll = function() {
+              if (window.pageYOffset > 50) {
+                document.getElementById("intro").style.display = "block";
+              }
+            };
         </script>
-          <footer>
+        <footer>
             <p>Website used in this site are in no way affiliated with me</p>
 </footer>
     </body>
 </html>
+
