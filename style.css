@@ -206,9 +206,12 @@ footer{
 }
 .t{
   color: whitesmoke;
-  transform: translateX(50rem);
+  transform: translateX(30rem);
 }
 .end{
   size: 4px;
   color: darkgray;
   }
+FOD{
+  transform: translateX(-10rem);
+}
